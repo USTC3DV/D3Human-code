@@ -1,0 +1,8 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Subdivision Surfaces: Midpoint">
+  <Param isxmlparam="0" tooltip="Number of time the model is subdivided." value="3" description="Iterations" name="Iterations" type="RichInt"/>
+  <Param isxmlparam="0" min="0" tooltip="All the edges &lt;b>longer&lt;/b> than this threshold will be refined.&lt;br>Setting this value to zero will force an uniform refinement." value="0.002" max="1.63779" description="Edge Threshold" name="Threshold" type="RichAbsPerc"/>
+  <Param isxmlparam="0" tooltip="If selected the filter affect only the selected faces" value="false" description="Affect only selected faces" name="Selected" type="RichBool"/>
+ </filter>
+</FilterScript>

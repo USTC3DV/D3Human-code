@@ -1,0 +1,17 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Remeshing: Isotropic Explicit Remeshing">
+  <Param name="Iterations" tooltip="Number of iterations of the remeshing operations to repeat on the mesh." value="3" type="RichInt" description="Iterations" isxmlparam="0"/>
+  <Param name="Adaptive" tooltip="Toggles adaptive isotropic remeshing." value="false" type="RichBool" description="Adaptive remeshing" isxmlparam="0"/>
+  <Param name="SelectedOnly" tooltip="If checked the remeshing operations will be applied only to the selected faces." value="false" type="RichBool" description="Remesh only selected faces" isxmlparam="0"/>
+  <Param name="TargetLen" tooltip="Sets the target length for the remeshed mesh edges." value="0.01" type="RichAbsPerc" min="0" description="Target Length" isxmlparam="0" max="1.66844"/>
+  <Param name="FeatureDeg" tooltip="Minimum angle between faces of the original to consider the shared edge as a feature to be preserved." value="30" type="RichFloat" description="Crease Angle" isxmlparam="0"/>
+  <Param name="CheckSurfDist" tooltip="If toggled each local operation must deviate from original mesh by [Max. surface distance]" value="true" type="RichBool" description="Check Surface Distance" isxmlparam="0"/>
+  <Param name="MaxSurfDist" tooltip="Maximal surface deviation allowed for each local operation" value="0.01" type="RichAbsPerc" min="0" description="Max. Surface Distance" isxmlparam="0" max="1.66844"/>
+  <Param name="SplitFlag" tooltip="If checked the remeshing operations will include a refine step." value="true" type="RichBool" description="Refine Step" isxmlparam="0"/>
+  <Param name="CollapseFlag" tooltip="If checked the remeshing operations will include a collapse step." value="true" type="RichBool" description="Collapse Step" isxmlparam="0"/>
+  <Param name="SwapFlag" tooltip="If checked the remeshing operations will include a edge-swap step, aimed at improving the vertex valence of the resulting mesh." value="true" type="RichBool" description="Edge-Swap Step" isxmlparam="0"/>
+  <Param name="SmoothFlag" tooltip="If checked the remeshing operations will include a smoothing step, aimed at relaxing the vertex positions in a Laplacian sense." value="true" type="RichBool" description="Smooth Step" isxmlparam="0"/>
+  <Param name="ReprojectFlag" tooltip="If checked the remeshing operations will include a step to reproject the mesh vertices on the original surface." value="true" type="RichBool" description="Reproject Step" isxmlparam="0"/>
+ </filter>
+</FilterScript>
