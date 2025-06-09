@@ -1773,8 +1773,8 @@ if __name__ == "__main__":
     dataset_train_split   = Dataset_split(data_root, FLAGS, examples=int(FLAGS.split_smpl_epoch))
     dataset_validate_split = Dataset_split(data_root, FLAGS)
 
-    # geometry, mat = optimize_mesh_split(denoiser, glctx, geometry, mat, lgt, dataset_train_split, dataset_validate_split, 
-    #                 FLAGS, pass_idx=0, pass_name="pass1", optimize_light=FLAGS.learn_lighting, save_path=os.path.join(FLAGS.out_dir, "split_smpl"))
+    geometry, mat = optimize_mesh_split(denoiser, glctx, geometry, mat, lgt, dataset_train_split, dataset_validate_split, 
+                    FLAGS, pass_idx=0, pass_name="pass1", optimize_light=FLAGS.learn_lighting, save_path=os.path.join(FLAGS.out_dir, "split_smpl"))
 
     process_root = os.path.join(FLAGS.out_dir, "process_smpl")
     os.makedirs(process_root, exist_ok=True)
@@ -1801,8 +1801,8 @@ if __name__ == "__main__":
 
     geometry._init_msdf()
     geometry._init_sdf()
-    # geometry, mat = optimize_mesh_init(denoiser, glctx, geometry, mat, lgt, dataset_train_init, dataset_validate_init, 
-    #                 FLAGS, pass_idx=0, pass_name="pass1", optimize_light=FLAGS.learn_lighting, save_path=os.path.join(FLAGS.out_dir, "init"))
+    geometry, mat = optimize_mesh_init(denoiser, glctx, geometry, mat, lgt, dataset_train_init, dataset_validate_init, 
+                    FLAGS, pass_idx=0, pass_name="pass1", optimize_light=FLAGS.learn_lighting, save_path=os.path.join(FLAGS.out_dir, "init"))
 
 
     ##################################################################
@@ -1824,8 +1824,8 @@ if __name__ == "__main__":
 
         geometry, mat, lgt = load_ckp(FLAGS, FLAGS.out_dir, geometry, mat, stage="init")
 
-        # geometry, mat = optimize_mesh_split(denoiser, glctx, geometry, mat, lgt, dataset_train_split, dataset_validate_split, 
-        #                 FLAGS, pass_idx=0, pass_name="pass1", optimize_light=FLAGS.learn_lighting, save_path=os.path.join(FLAGS.out_dir, FLAGS.split_folder))
+        geometry, mat = optimize_mesh_split(denoiser, glctx, geometry, mat, lgt, dataset_train_split, dataset_validate_split, 
+                        FLAGS, pass_idx=0, pass_name="pass1", optimize_light=FLAGS.learn_lighting, save_path=os.path.join(FLAGS.out_dir, FLAGS.split_folder))
 
         process_root = os.path.join(FLAGS.out_dir, "process"+FLAGS.split_folder)
         os.makedirs(process_root, exist_ok=True)
