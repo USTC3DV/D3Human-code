@@ -3,6 +3,7 @@
 PyTorch implementation of the paper "D3-Human: Dynamic Disentangled Digital Human from Monocular Video". This repository contains the reconstructing code and data.
 
 **|[Project Page](https://ustc3dv.github.io/D3Human/)|**  **|[Paper](https://arxiv.org/html/2501.01589v1)|**
+
 This method can reconstruct disentangled garment and body geometry from monocular videos.
 
 ## Pipeline
