@@ -37,7 +37,7 @@ Download the preprocess data from [here](https://drive.google.com/drive/folders/
 Use the following code to reconstruct:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py -o res/0609_f3c --folder_name female-3-casual --config configs/f3c.json
+CUDA_VISIBLE_DEVICES=0 python train.py -o res/f3c --folder_name female-3-casual --config configs/f3c.json
 ```
 
 
