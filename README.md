@@ -21,11 +21,11 @@ Environment:
 * Ubuntu 20.04
 * python 3.8.19
 
-Our default, provided install method is:
+Install Nvdiffrast as:
 ```
-conda env create -f environment.yml
-conda activate D3Human
-pip install -r requirements.txt
+pip install ninja imageio PyOpenGL glfw xatlas gdown
+pip install git+https://github.com/NVlabs/nvdiffrast/
+pip install --global-option="--no-networks" git+https://github.com/NVlabs/tiny-cuda-nn#subdirectory=bindings/torch
 ```
 
 Download the female SMPL-X model from https://smpl-x.is.tue.mpg.de/ and place them in the folder of `./smplx`.
