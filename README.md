@@ -21,7 +21,7 @@ Environment:
 * Ubuntu 20.04
 * python 3.8.19
 
-Install Nvdiffrast as:
+Run the following:
 ```
 pip install ninja imageio PyOpenGL glfw xatlas gdown
 pip install git+https://github.com/NVlabs/nvdiffrast/
